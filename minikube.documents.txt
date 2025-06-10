@@ -1,0 +1,16 @@
+sudo yum update -y;sudo yum install docker -y;sudo systemctl start docker;sudo usermod -a -G docker ec2-user;sudo systemctl enable docker;sudo systemctl status docker
+
+
+
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https//dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+chmod +x kubectl
+
+sudo mv kubectl /usr/bin
+
+
+curl -LO https://github.com/kubernates/minikube/releases/download/v1.24.O/minikube-linux-amd64
+
+
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
